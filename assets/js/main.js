@@ -63,6 +63,7 @@
         var opt = $.extend(
             {
                 menuToggleBtn: ".th-menu-toggle",
+                menuClass: ".menu-class",
                 bodyToggleClass: "th-body-visible",
                 subMenuClass: "th-submenu",
                 subMenuParent: "menu-item-has-children",
@@ -124,6 +125,12 @@
 
             // Menu Show & Hide On Toggle Btn click
             $(opt.menuToggleBtn).each(function () {
+                $(this).on("click", function () {
+                    menuToggle();
+                });
+            });
+            // Menu Show & Hide On Toggle Btn click
+            $(opt.menuClass).each(function () {
                 $(this).on("click", function () {
                     menuToggle();
                 });
@@ -1453,29 +1460,5 @@
 
 
 
-    /*----------- 00. Right Click Disable ----------*/
-    //   window.addEventListener('contextmenu', function (e) {  
-    //     // do something here...
-    //     e.preventDefault();   
-    //   }, false); 
-
-    /*----------- 00. Inspect Element Disable ----------*/
-    //   document.onkeydown = function (e) {   
-    //     if (event.keyCode == 123) {
-    //       return false;
-    //     }
-    //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-    //       return false;
-    //     }
-    //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-    //       return false;
-    //     }
-    //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-    //       return false;
-    //     }
-    //     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-    //       return false;
-    //     }
-    //   }   
 
 })(jQuery);
